@@ -1,10 +1,18 @@
 {
-  "name": "exp_handlebars",
+  "name": "burger_joint",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "heroku": "^7.47.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,11 +23,5 @@
   "bugs": {
     "url": "https://github.com/heychuck11/Burger/issues"
   },
-  "homepage": "https://github.com/heychuck11/Burger#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "heroku": "^7.47.0",
-    "mysql": "^2.18.1"
-  }
+  "homepage": "https://github.com/heychuck11/Burger#readme"
 }
