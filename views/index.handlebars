@@ -1,5 +1,13 @@
 <h1>Burger Hut!</h1>
+<h2>time to eat</h2>
 
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
 
 <h2>Burgers that get devoured!</h2>
 
@@ -27,3 +35,5 @@
 
   <button type="submit">Devour</button>
 </form>
+
+
