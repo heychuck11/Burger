@@ -1,8 +1,9 @@
-$(function() {
+$(document).ready(function(){
+  console.log("pageLoaded")
   $(".change-devoured").on("click", function(event) {
     var id = $(this).data("id");
     var eaten = $(this).data("burger is eaten");
-
+    console.log("burger devoured")
     var newBurgerState = {
       devour: eaten
     };
@@ -26,8 +27,10 @@ $(function() {
 
     var newBurger = {
       name: $("#ca").val().trim(),
-      sleepy: $("[name=devoured]:checked").val().trim()
+      devoured: $("[name=devoured]:checked").val().trim()
+
     };
+    console.log(newBurger)
 
     
     $.ajax("/api/burgers", {
@@ -44,7 +47,7 @@ $(function() {
 
   $(".delete-burger").on("click", function(event) {
     var id = $(this).data("id");
-
+    console.log("burger deleted")
     
     $.ajax("/api/burgers/" + id, {
       type: "DELETE"
